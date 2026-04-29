@@ -387,15 +387,15 @@ function easeOutSuspense(t) {
 }
 
 /* Weighted picker:
-   JACKPOT = 2%  (15 pts)
-   1–6     = 80% (÷6 each = 13.33% each)
-   7–10 + FREE SPIN = 18% (÷5 each = 3.6% each) */
+   3,4,5,6           = 21.6% each (86.4% total)
+   1,2,7,8,9,10,FREE = 1.8%  each (12.6% total)
+   JACKPOT           = 1% */
 function pickWeightedSegment() {
-  const below7Labels = ['1','2','3','4','5','6'];
+  const topLabels = ['3','4','5','6'];
   const weights = segments.map(s => {
-    if (s.jackpot)                         return 2;
-    if (below7Labels.includes(s.label))    return 80 / 6;   // ~13.33%
-    return 18 / 5;                                           // 3.6% (7–10 + FREE)
+    if (s.jackpot)                   return 1;
+    if (topLabels.includes(s.label)) return 21.6;
+    return 1.8;
   });
   let r = Math.random() * weights.reduce((a, b) => a + b, 0);
   for (let i = 0; i < weights.length; i++) { r -= weights[i]; if (r <= 0) return i; }
