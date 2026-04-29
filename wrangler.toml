@@ -1,0 +1,9 @@
+name = "lemon-gaming-worker"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+[vars]
+# No secrets stored here — TG_TOKEN and TG_CHAT_IDS are hardcoded in worker.js
+# To use environment secrets instead, run:
+#   wrangler secret put TG_TOKEN
+#   wrangler secret put TG_CHAT_IDS
