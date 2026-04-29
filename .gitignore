@@ -24,3 +24,5 @@ node_modules/
 # Cloudflare / Wrangler
 .wrangler/
 .dev.vars
+worker.js
+wrangler.toml
