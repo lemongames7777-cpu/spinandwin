@@ -2,7 +2,7 @@
    LEMON GAMING — script.js
 ════════════════════════════════════════════ */
 
-const WORKER_URL = 'https://aged-scene-aaaa.luckywheels509.workers.dev';
+const WORKER_URL = 'https://quiet-cell-3812.lemongames7777.workers.dev/';
 
 
 /* ─── Tawk.to Widget Configuration ────────────── */
